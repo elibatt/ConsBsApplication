@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:strokeColor="@color/red_palette"
+    app:strokeWidth="3dp"
+    app:cardCornerRadius="5dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/nominativo_lezione"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textColor="@color/blue_palette"
+            android:text="Solfeggio I"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp" />
+        <TextView
+            android:id="@+id/lezione_aula_sede"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/blue_palette"
+            android:text="Aula 103 - BS1"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/nominativo_lezione"/>
+
+        <TextView
+            android:id="@+id/orario_lezione"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lezione_aula_sede"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
+            android:layout_marginLeft="30dp"
+            android:text="15.30-16.30"
+            android:textColor="@color/blue_palette"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

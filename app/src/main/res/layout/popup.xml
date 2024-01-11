@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:strokeColor="@color/red_palette"
+    app:strokeWidth="3dp"
+    app:cardCornerRadius="5dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="#CDA2B2"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".classrooms.PopupActivity"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/linear_eventi_aula"
+            android:layout_marginTop="30dp"
+            >
+            <TextView
+                android:id="@+id/eventi_aula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eventi Aula 100\nData: 18/08/2023 "
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/auleDettaglioRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/layout_booking_aula"
+            android:layout_below="@+id/linear_eventi_aula"
+            />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

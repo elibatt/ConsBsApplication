@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".chat.MessaggiActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_marginTop="10dp"
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/arrow_back"
+                android:layout_width="49dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/persona_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:text="Mario Rossi"
+                android:textAlignment="center"
+                android:textColor="#241C44"
+                android:textSize="32dp"
+                tools:ignore="RtlCompat" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messaggiRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/linear"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/linear"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_above="@+id/linearLayout"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:weightSum="100"
+            >
+
+            <EditText
+                android:id="@+id/messageBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="85"
+                android:layout_marginLeft="10dp"
+                android:hint="Scrivi un messaggio"
+                android:maxLines="4"
+                android:inputType="textCapSentences|textMultiLine"
+                />
+
+            <ImageView
+                android:id="@+id/sendButton"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_send_24"
+                android:layout_weight="15"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

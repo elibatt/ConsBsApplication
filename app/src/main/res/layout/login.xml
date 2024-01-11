@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:src="@drawable/secondo_logo"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_emailutente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_logo"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/emailutente"
+            android:layout_width="329dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="text"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:backgroundTint="#4e4e4e"
+            android:tag="email" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_passwordutente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/linear_emailutente"
+        android:layout_marginTop="40dp">
+
+        <EditText
+            android:id="@+id/passwordutente"
+            android:layout_width="329dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:backgroundTint="#4e4e4e"
+            android:tag="password" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_messaggio_errore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/linear_passwordutente"
+        android:layout_marginTop="60dp">
+
+        <TextView
+            android:id="@+id/messaggio_errore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red_palette"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="22dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_submitutente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/linear_messaggio_errore"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/submitutente"
+            android:layout_width="329dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button_red"
+            android:text="Login"
+            android:textSize="24dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:paddingVertical="5dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

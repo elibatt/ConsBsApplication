@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".lectures.LezioneActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_marginTop="10dp"
+                android:layout_height="80dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="49dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/baseline_menu_24" />
+
+                <TextView
+                    android:id="@+id/titolo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="Le mie lezioni"
+                    android:textAlignment="center"
+                    android:textColor="#241C44"
+                    android:textSize="36dp"
+                    tools:ignore="RtlCompat" />
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="49dp"
+                    android:layout_height="76dp"
+                    app:srcCompat="@drawable/logo1"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linear"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp">
+
+                <ImageView
+                    android:id="@+id/indietro_giorno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    />
+
+                <ImageView
+                    android:id="@+id/icona_calendario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_calendar_month_24"
+                    android:layout_marginLeft="50dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_data_prenotazione"
+                    android:text=" Data: "
+                    android:textSize="22dp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/data_prenotazione"
+                    android:text="17/08/2023"
+                    android:background="@drawable/rectangle_prenotazione"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    />
+                <ImageView
+                    android:id="@+id/avanti_giorno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_arrow_forward_24"
+                    android:layout_marginLeft="50dp"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lezioniRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/linear_data"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/linear"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                tools:listitem="@layout/layout_lezione"
+
+                />
+
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include layout="@layout/layout_menu" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

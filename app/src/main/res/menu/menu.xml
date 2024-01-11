@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_lezioni"
+        android:title="Lezioni"
+        android:checked="false"/>
+    <item
+        android:id="@+id/menu_aule"
+        android:title="Aule"
+        android:checked="false"/>
+    <item
+        android:id="@+id/menu_prenotazioni"
+        android:title="Prenotazioni"
+        android:checked="false"/>
+    <item
+        android:id="@+id/menu_chat"
+        android:title="Chat"
+        android:checked="false"
+       />
+    <item
+        android:id="@+id/menu_profilo"
+        android:title="Profilo"
+        android:checked="false"/>
+    <item
+        android:id="@+id/menu_logout"
+        android:title="Logout"
+        android:checked="false"/>
+</menu>

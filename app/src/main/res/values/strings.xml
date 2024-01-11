@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ConsBS</string>
+    <string name="default_notification_channel_id">notification_channel</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiYW5hc2Vsa291YWl0aSIsImEiOiJjbGk4bTJqdWsxdGtpM2ttbDVocHUyamVnIn0.G0T0H-PVgIQkL7YbEgjY0g</string>
+</resources>

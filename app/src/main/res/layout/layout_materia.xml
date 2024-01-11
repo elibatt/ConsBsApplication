@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:background="@drawable/rectangle_materia"
+    app:strokeWidth="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/nome_materia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/blue_palette"
+            android:text="Pianoforte I"
+            android:padding="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp" />
+
+        <CheckBox
+            android:id="@+id/materia_selezionata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
+            android:checked="false"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
